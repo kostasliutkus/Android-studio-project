@@ -27,5 +27,32 @@
         android:id="@+id/navigation_signal_strength_list"
         android:name="com.example.lab1.ui.signalstrengthlist.Signal_strength_list"
         android:label="@string/title_signals_strength_list"
-        tools:layout="@layout/fragment_signal_strength_list" />
+        tools:layout="@layout/fragment_signal_strength_list" >
+        <action
+            android:id="@+id/action_list_to_edit"
+            app:destination="@id/navigation_user_edit" />
+        <action
+            android:id="@+id/action_navigation_signal_strength_list_to_navigation_user_add"
+            app:destination="@id/navigation_user_add" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_edit"
+        android:name="com.example.lab1.ui.UserEdit.UserEdit"
+        android:label="@string/title_user_edit"
+        tools:layout="@layout/fragment_user_edit" >
+        <action
+            android:id="@+id/action_navigation_user_edit_to_navigation_signal_strength_list"
+            app:destination="@id/navigation_signal_strength_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_add"
+        android:name="com.example.lab1.ui.UserAdd.UserAdd"
+        android:label="@string/title_user_add"
+        tools:layout="@layout/fragment_user_add" >
+        <action
+            android:id="@+id/action_navigation_user_add_to_navigation_signal_strength_list"
+            app:destination="@id/navigation_signal_strength_list" />
+    </fragment>
 </navigation>

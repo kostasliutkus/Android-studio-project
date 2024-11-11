@@ -1,5 +1,6 @@
 package com.example.lab1.data
 
+import android.app.Application
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -19,6 +20,17 @@ fun ReadStiprumai(context: Context): List<Stiprumai> {
     return stiprumai
 }
 fun ReadUsers(context: Context): List<User> {
+
+    val inputStream = context.assets.open("Vartotojai.json")
+    val reader = BufferedReader(InputStreamReader(inputStream))
+
+    val usersType = object : TypeToken<List<User>>() {}.type
+    val users: List<User> = Gson().fromJson(reader, usersType)
+
+    reader.close()
+    return users
+}
+fun ReadUsers(context: Application): List<User> {
 
     val inputStream = context.assets.open("Vartotojai.json")
     val reader = BufferedReader(InputStreamReader(inputStream))
