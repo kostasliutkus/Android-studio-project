@@ -81,7 +81,8 @@ class Signal_strength_list : Fragment() {
             Observer { users ->
                 sensorDataAdapter.setUsers(users)
             })
-        signalStrengthListViewModel.loadUsersFromJson()
+        //signalStrengthListViewModel.clearUsers()
+//        signalStrengthListViewModel.loadUsersFromJson()
 //        signalStrengthListViewModel.userList.observe(viewLifecycleOwner) { userList ->
 //            Log.d(
 //                "CBB",

@@ -57,6 +57,8 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.google.material)
     implementation(libs.androidx.activity.ktx)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

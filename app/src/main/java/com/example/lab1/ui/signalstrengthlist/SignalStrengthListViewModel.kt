@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.lab1.data.ReadUsers
+import com.example.lab1.data.ReadUsersFromApi
 import com.example.lab1.data.User
 import com.example.lab1.data.UserDatabase
 import kotlinx.coroutines.Dispatchers
