@@ -6,27 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.signalstrengthlist.Signal_strength_list">
 
-    <TextView
-        android:id="@+id/text_signalstrengthlist"
-        android:layout_width="256dp"
-        android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signal_strength_list_recycler_view"
-        app:layout_constraintVertical_bias="0.193" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/signal_strength_list_recycler_view"
-        android:layout_width="354dp"
-        android:layout_height="819dp"
+        android:layout_width="343dp"
+        android:layout_height="417dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.033" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
