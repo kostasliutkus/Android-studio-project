@@ -22,12 +22,22 @@ interface UserDao {
     @Delete
     suspend fun delete(user: User)
 
-    @Query("SELECT * from users WHERE id = :id")
-    fun getUser(id: Int): Flow<User>
+    @Query("SELECT * from users WHERE mac = :mac")
+    fun getUser(mac: String): Flow<List<User>>
 
     @Query("SELECT * from users ORDER BY mac ASC")
     fun getAllUsers(): Flow<List<User>>
 
+    @Query("SELECT DISTINCT mac FROM users")
+    fun getUniqueUsers(): Flow<List<String>>
+
+    @Query("""
+    SELECT mac FROM users
+    ORDER BY id DESC
+    LIMIT 1 
+""")
+    suspend fun getLatestUser(): String
+
     @Query("DELETE from users")
-    fun deleteAllUsers()
+    suspend fun deleteAllUsers()
 }

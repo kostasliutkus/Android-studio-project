@@ -2,7 +2,6 @@ package com.example.lab1.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.lang.reflect.Type
 
 @Entity(tableName ="users")
 data class User(
@@ -11,4 +10,4 @@ data class User(
     val mac: String ="",
     val stiprumas: String ="",
     val sensorius: String=""
-) : Type
+)

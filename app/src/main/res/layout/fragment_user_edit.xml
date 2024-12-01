@@ -1,13 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.UserEdit.UserEdit">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="360dp"
-        android:layout_height="672dp"
-        android:text="Hello this is fragment user edit" />
+    <EditText
+        android:id="@+id/editMac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MAC Address" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/editSensorius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sensorius" />
+
+    <EditText
+        android:id="@+id/editStiprumas1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stiprumas" />
+
+    <EditText
+        android:id="@+id/editSensorius2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sensorius" />
+
+    <EditText
+        android:id="@+id/editStiprumas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stiprumas" />
+
+    <EditText
+        android:id="@+id/editSensorius3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sensorius" />
+
+    <EditText
+        android:id="@+id/editStiprumas3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stiprumas" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+</LinearLayout>

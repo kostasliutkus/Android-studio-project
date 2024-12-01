@@ -7,8 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.lab1.data.ReadUsers
-import com.example.lab1.data.ReadUsersFromApi
 import com.example.lab1.data.User
 import com.example.lab1.data.UserDatabase
 import kotlinx.coroutines.Dispatchers
@@ -17,12 +15,16 @@ import kotlinx.coroutines.launch
 class SignalStrengthListViewModel(application: Application) : AndroidViewModel(application ) {
 
     private val userDao = UserDatabase.getDatabase(application).userDao()
-    private val _userList = MutableLiveData<List<User>>()
-    val userList: LiveData<List<User>> get() = _userList
+    private val _userList = MutableLiveData<List<String>>()
+
+    private val _userSaved = MutableLiveData<Boolean>()
+    val userSaved: LiveData<Boolean> get() = _userSaved
+
+    val userList: LiveData<List<String>> get() = _userList
     private fun loadUsers()
     {
         viewModelScope.launch(Dispatchers.IO) {
-            userDao.getAllUsers().collect() {userList ->
+            userDao.getUniqueUsers().collect() {userList ->
                 _userList.postValue(userList)
             }
         }
@@ -31,25 +33,21 @@ class SignalStrengthListViewModel(application: Application) : AndroidViewModel(a
         loadUsers()
     }
 
-    fun loadUsersFromJson() {
-        viewModelScope.launch(Dispatchers.IO)
-        {
-            val users: List<User> = ReadUsers(getApplication())
-
-            users.forEach {user ->
-                userDao.insert(user)
-            }
-
-            loadUsers()
-        }
-    }
-
     fun saveUser(user: User) {
         viewModelScope.launch(Dispatchers.IO) {
             userDao.insert(user)
 
             loadUsers()
         }
+    }
+
+    suspend fun getSelected(): String {
+        val mac_address = userDao.getLatestUser()
+        return mac_address.toString()
+    }
+
+    fun update() {
+        _userSaved.postValue(true)
     }
 
     fun clearUsers() {
