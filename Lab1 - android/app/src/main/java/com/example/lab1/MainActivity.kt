@@ -16,6 +16,7 @@ import com.example.lab1.data.User
 import com.example.lab1.data.UserDatabase
 import com.example.lab1.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.awaitResponse
@@ -131,6 +132,17 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Log.d("STIPRUMAI API","Error: Could not fetch stiprumai from the API")
 
+            }
+        }
+        lifecycleScope.launch {
+            userDao.getAllUsers().collectLatest { users ->
+                if (users.isNotEmpty()) {
+                    users.forEach { user ->
+                        Log.d("DATABASE", "User: ID=${user.id}, MAC=${user.mac}, Sensor=${user.sensorius}, Strength=${user.stiprumas}")
+                    }
+                } else {
+                    Log.d("DATABASE", "No users found in the preloaded database.")
+                }
             }
         }
     }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Labas\\Desktop\\lab1 - android\\API-ANDROID\\API-ANDROID.csproj": {}
+    "C:\\Users\\Kostas Liutkus\\Desktop\\android\\Android-studio-project\\API-ANDROID\\API-ANDROID.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Labas\\Desktop\\lab1 - android\\API-ANDROID\\API-ANDROID.csproj": {
+    "C:\\Users\\Kostas Liutkus\\Desktop\\android\\Android-studio-project\\API-ANDROID\\API-ANDROID.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Labas\\Desktop\\lab1 - android\\API-ANDROID\\API-ANDROID.csproj",
+        "projectUniqueName": "C:\\Users\\Kostas Liutkus\\Desktop\\android\\Android-studio-project\\API-ANDROID\\API-ANDROID.csproj",
         "projectName": "API-ANDROID",
-        "projectPath": "C:\\Users\\Labas\\Desktop\\lab1 - android\\API-ANDROID\\API-ANDROID.csproj",
-        "packagesPath": "C:\\Users\\Labas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Labas\\Desktop\\lab1 - android\\API-ANDROID\\obj\\",
+        "projectPath": "C:\\Users\\Kostas Liutkus\\Desktop\\android\\Android-studio-project\\API-ANDROID\\API-ANDROID.csproj",
+        "packagesPath": "C:\\Users\\Kostas Liutkus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kostas Liutkus\\Desktop\\android\\Android-studio-project\\API-ANDROID\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Labas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kostas Liutkus\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -36,8 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -79,6 +80,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -87,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

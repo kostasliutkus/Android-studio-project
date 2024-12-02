@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "lVE7SIwxOX0256aaeDArUvvNhoqSHAgZx0z2VOWVYv4=",
+  "Hash": "Bjer0M8FTxMOak9TXedx6bb00ua5rrcD6yYlJclMDC8=",
   "Source": "API-ANDROID",
   "BasePath": "_content/API-ANDROID",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
